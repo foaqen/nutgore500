@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>NUTGORE - Bağış</title>
+    <style>
+      @font-face {
+        font-family: 'Phonk';
+        src: url('https://cdn.glitch.global/8091a268-55b7-40c3-9d6f-89b07aa1a923/phonk.otf?v=1727549509482') format('truetype');
+        font-weight: 900;
+        font-style: normal;
+      }
+
+      body {
+        margin: 0;
+        padding: 20px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        color: #000000;
+        text-align: center;
+      }
+
+      h1 {
+        font-family: 'Phonk', sans-serif;
+        font-size: 3.5rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin-bottom: 20px;
+      }
+
+      .donate-section {
+        display: none;
+        margin-top: 40px;
+        text-align: center;
+      }
+
+      .donate-section h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .donate-section p {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      .donate-section .qr-code {
+        margin: 20px 0;
+      }
+
+      .wallet-address {
+        font-size: 1rem;
+        font-weight: 700;
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 5px;
+        word-wrap: break-word;
+        display: inline-block;
+        max-width: 80%;
+      }
+
+      button {
+        font-size: 1.2rem;
+        font-weight: 900;
+        padding: 10px 20px;
+        color: #ffffff;
+        background-color: #007BFF;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>NUTGORE</h1>
+    <p>bu sayfaya geldiysen hosting ucretini odeyememisizdir</p>
+
+    <!-- Bağış butonu -->
+    <button id="donateBtn">Bağış yapmak ister misiniz?</button>
+
+    <!-- Bağış bölümü -->
+    <div class="donate-section" id="donateSection">
+      <h2>Bağış Yapın (Kripto: SOL)</h2>
+      <p>Solana (SOL) kullanarak bağış yapabilirsiniz.</p>
+      <p class="wallet-address">6cERn8Ch8ieH18BGxSV5GqpcDUCvdekCGUdnzRVaZXuF</p> <!-- Kripto cüzdan adresi örneği -->
+      <div class="qr-code">
+        <img src="https://i.ibb.co/vB4PvK6/qr.png" alt="SOL QR Kod"> <!-- QR kod yer tutucu -->
+      </div>
+      <p>Bağış adresini kopyalayın veya QR kodu tarayın.</p>
+    </div>
+
+    <script>
+      // Butona tıklanınca bağış bölümünü aç/kapat (toggle)
+      document.getElementById("donateBtn").addEventListener("click", function() {
+        var donateSection = document.getElementById("donateSection");
+        if (donateSection.style.display === "none" || donateSection.style.display === "") {
+          donateSection.style.display = "block"; // Bağış bölümü açılır
+        } else {
+          donateSection.style.display = "none"; // Bağış bölümü kapanır
+        }
+      });
+    </script>
+  </body>
+</html>
